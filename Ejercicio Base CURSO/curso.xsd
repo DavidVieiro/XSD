@@ -13,6 +13,8 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
 					   <xs:element name="nocturno" type="xs:boolean"/>
                        <xs:element name="Horas" type="xs:nonNegativeInteger"/>
                        <xs:element name="fechaComienzo" type="xs:date"/>
+                       <xs:element name="horaComienzo" type="xs:time"/>
+                       <xs:element name="precio" type="xs:float"/>
                  </xs:sequence>
               </xs:complexType>
              </xs:element>

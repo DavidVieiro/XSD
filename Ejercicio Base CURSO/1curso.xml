@@ -6,12 +6,16 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 		<nocturno>false</nocturno>
 		<Horas>200</Horas>
 		<fechaComienzo>2017-03-17</fechaComienzo>
+		<horaComienzo>08:30:00</horaComienzo>
+		<precio>20.0</precio>
 	</Curso>
 	<Curso>
 		<Titulo>BBDD</Titulo>
 		<nocturno>true</nocturno>
 		<Horas>210</Horas>
 		<fechaComienzo>2017-03-20</fechaComienzo>
+		<horaComienzo>09:30:00</horaComienzo>
+		<precio>20.0</precio>
 	</Curso>
  </Lista>
 
