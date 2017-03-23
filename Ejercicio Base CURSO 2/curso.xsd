@@ -11,6 +11,7 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
                  <xs:sequence>
                        <xs:element name="Titulo" type="xs:string"/>
                        <xs:element name="tituloCorto" type="tituloTC"/>
+                       <xs:element name="grupo" type="tipoGrupo"/>
 					   <xs:element name="nocturno" type="xs:boolean"/>
                        <xs:element name="Horas" type="xs:nonNegativeInteger" minOccurs="0"/>
                        <xs:element name="fechaComienzo" type="xs:date"/>
@@ -31,7 +32,13 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
 			<xs:maxLength value="4" />
 		</xs:restriction>
     </xs:simpleType>
-	
+	<xs:simpleType name="tipoGrupo">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DAM1"/>
+			<xs:enumeration value="ASI1"/>
+			<xs:enumeration value="SMR1"/>
+		</xs:restriction>
+    </xs:simpleType>
 	
 </xs:schema>
 

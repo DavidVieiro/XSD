@@ -4,6 +4,7 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 	<Curso>
 		<Titulo>Lenguaje de Marcas</Titulo>
 		<tituloCorto>LM</tituloCorto>
+		<grupo>ASI1</grupo> <!-- ASI1 / DAM1 / SMR1 -->
 		<nocturno>false</nocturno>
 		<Horas>200</Horas>
 		<fechaComienzo>2017-03-17</fechaComienzo>
@@ -19,6 +20,7 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 	<Curso>
 		<Titulo>Bases de Datos</Titulo>
 		<tituloCorto>BBDD</tituloCorto>
+		<grupo>DAM1</grupo>
 		<nocturno>true</nocturno>
 		<Horas>210</Horas>
 		<fechaComienzo>2017-03-20</fechaComienzo>
