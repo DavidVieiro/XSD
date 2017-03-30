@@ -18,6 +18,14 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 		<telefono>981-619900</telefono>
 		<!-- El telefonoMovil empieza por 6 o 7 usando patrones fuera -->
 		<telefonoMovil>654 65 45 45</telefonoMovil>
+		<!-- numero hexadecimal -->
+		<numero>0A</numero>
+		<!-- aulas 05, 18, 20 -->
+		<equipo>PC0501</equipo>
+		<!-- dam1, dam2, smr1, smr2 -->
+		<usuario>dam101</usuario>
+		<dni>12345678A</dni>
+		<mac>11:22:33:44:55:66:77:88</mac>
 	</Curso>
 	<Curso>
 		<Titulo>Bases de Datos</Titulo>
@@ -30,6 +38,11 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 		<precio>20.0</precio>
 		<telefono>881-619900</telefono>
 		<telefonoMovil>654 65 46 44</telefonoMovil>
+		<numero>0A</numero>
+		<equipo>PC1821</equipo>
+		<usuario>smr230</usuario>
+		<dni>12345678A</dni>
+		<mac>11:22:33:44:55:66:77:88</mac>
 	</Curso>
  </Lista>
 

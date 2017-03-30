@@ -20,6 +20,11 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
                        <xs:element name="tema" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
                        <xs:element name="telefono" type="telefono1"/>
 					   <xs:element name="telefonoMovil" type="telefono2" />
+					   <xs:element name="numero" type="numeroHex" />
+					   <xs:element name="equipo" type="equipo" />
+					   <xs:element name="usuario" type="usuario" />
+					   <xs:element name="dni" type="dni" />
+					   <xs:element name="mac" type="mac" />
                  </xs:sequence>
               </xs:complexType>
              </xs:element>
@@ -51,6 +56,38 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
 			<xs:pattern value="[67]\d{2}(\s\d{2}){3}" />
 		</xs:restriction>
 	</xs:simpleType>
+	
+	<xs:simpleType name="numeroHex">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9A-F]){2}" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="equipo">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="PC(05|18|20)\d{2}" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="usuario">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(dam|smr)[1-2]\d{2}" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="dni">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{8}\w" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="mac">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9A-F]){2}(:(\d|[A-F]){2}){7}" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
 	
 </xs:schema>
 
