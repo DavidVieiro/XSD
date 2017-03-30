@@ -48,7 +48,7 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
 	
 	<xs:simpleType name="telefono2">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="[67]\d{2}\s\d{2}\s\d{2}\s\d{2}" />
+			<xs:pattern value="[67]\d{2}(\s\d{2}){3}" />
 		</xs:restriction>
 	</xs:simpleType>
 	
