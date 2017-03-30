@@ -9,16 +9,17 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
              <xs:element name="Curso" maxOccurs="unbounded">
                <xs:complexType>  <!-- curso es complejo porque contiene elementos -->
                  <xs:sequence>
-                       <xs:element name="Titulo" type="xs:string"/>
-                       <xs:element name="tituloCorto" type="tituloTC"/>
-                       <xs:element name="grupo" type="tipoGrupo"/>
-					   <xs:element name="nocturno" type="xs:boolean"/>
-                       <xs:element name="Horas" type="xs:nonNegativeInteger" minOccurs="0"/>
-                       <xs:element name="fechaComienzo" type="xs:date"/>
-                       <xs:element name="horaComienzo" type="xs:time"/>
-                       <xs:element name="precio" type="xs:float" maxOccurs="unbounded"/>
-                       <xs:element name="tema" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                       <xs:element name="telefono" type="xs:string" minOccurs="2" maxOccurs="2"/>
+                       <xs:element name="Titulo" type="xs:string" />
+                       <xs:element name="tituloCorto" type="tituloTC" />
+                       <xs:element name="grupo" type="tipoGrupo" minOccurs="0" />
+					   <xs:element name="nocturno" type="xs:boolean" />
+                       <xs:element name="Horas" type="xs:nonNegativeInteger" minOccurs="0" />
+                       <xs:element name="fechaComienzo" type="xs:date" />
+                       <xs:element name="horaComienzo" type="xs:time" />
+                       <xs:element name="precio" type="xs:float" maxOccurs="unbounded" />
+                       <xs:element name="tema" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+                       <xs:element name="telefono" type="telefono1"/>
+					   <xs:element name="telefonoMovil" type="telefono2" />
                  </xs:sequence>
               </xs:complexType>
              </xs:element>
@@ -32,13 +33,24 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
 			<xs:maxLength value="4" />
 		</xs:restriction>
     </xs:simpleType>
+	
 	<xs:simpleType name="tipoGrupo">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="DAM1"/>
-			<xs:enumeration value="ASI1"/>
-			<xs:enumeration value="SMR1"/>
+			<xs:pattern value="ASI[1-8]" />
 		</xs:restriction>
-    </xs:simpleType>
+	</xs:simpleType>
+	
+	<xs:simpleType name="telefono1">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[98]81-[0-9]{6}" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="telefono2">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[67]\d{2}\s\d{2}\s\d{2}\s\d{2}" />
+		</xs:restriction>
+	</xs:simpleType>
 	
 </xs:schema>
 

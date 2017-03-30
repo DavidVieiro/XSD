@@ -14,20 +14,22 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 		<precio>40.0</precio>
 		<tema>Introduccion</tema>
 		<tema>Desarrollo</tema>
-		<telefono>981619900</telefono>
-		<telefono>981619800</telefono>
+		<!-- el telefono tiene un prefijo de 981 o 881 usando patrones fuera -->
+		<telefono>981-619900</telefono>
+		<!-- El telefonoMovil empieza por 6 o 7 usando patrones fuera -->
+		<telefonoMovil>654 65 45 45</telefonoMovil>
 	</Curso>
 	<Curso>
 		<Titulo>Bases de Datos</Titulo>
 		<tituloCorto>BBDD</tituloCorto>
-		<grupo>DAM1</grupo>
+		<grupo>ASI2</grupo>
 		<nocturno>true</nocturno>
 		<Horas>210</Horas>
 		<fechaComienzo>2017-03-20</fechaComienzo>
 		<horaComienzo>09:30:00</horaComienzo>
 		<precio>20.0</precio>
-		<telefono>981619900</telefono>
-		<telefono>981619800</telefono>
+		<telefono>881-619900</telefono>
+		<telefonoMovil>654 65 46 44</telefonoMovil>
 	</Curso>
  </Lista>
 
