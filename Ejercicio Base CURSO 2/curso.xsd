@@ -71,13 +71,13 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
 	
 	<xs:simpleType name="usuario">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="(dam|smr)[1-2]\d{2}" />
+			<xs:pattern value="(dam|smr)[12]\d{2}" />
 		</xs:restriction>
 	</xs:simpleType>
 	
 	<xs:simpleType name="dni">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="\d{8}\w" />
+			<xs:pattern value="\d{8}[a-zA-Z]" />
 		</xs:restriction>
 	</xs:simpleType>
 	

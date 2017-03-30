@@ -38,7 +38,7 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 		<precio>20.0</precio>
 		<telefono>881-619900</telefono>
 		<telefonoMovil>654 65 46 44</telefonoMovil>
-		<numero>0A</numero>
+		<numero>FF</numero>
 		<equipo>PC1821</equipo>
 		<usuario>smr230</usuario>
 		<dni>12345678A</dni>
