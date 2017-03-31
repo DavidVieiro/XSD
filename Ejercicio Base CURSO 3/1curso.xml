@@ -3,6 +3,9 @@
 xsi:noNamespaceSchemaLocation="curso.xsd">
 	<Curso>
 		<fechasImportantes>2017-02-01 2016-01-02 2001-01-02</fechasImportantes>
+		<numerosPremiados>20 40 77</numerosPremiados>
+		<diasLM>Jueves Viernes</diasLM>
+		<diasSI>Lunes Martes Jueves</diasSI>
 	</Curso>
  </Lista>
 

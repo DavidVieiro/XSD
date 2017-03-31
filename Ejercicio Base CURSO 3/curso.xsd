@@ -10,6 +10,9 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
                <xs:complexType>  <!-- curso es complejo porque contiene elementos -->
                  <xs:sequence>
 						<xs:element name="fechasImportantes" type="tipoFI"/>
+						<xs:element name="numerosPremiados" type="tipoNP"/>
+						<xs:element name="diasLM" type="tipoDiaSemana"/>
+						<xs:element name="diasSI" type="tipoDiaSemana"/>
                  </xs:sequence>
               </xs:complexType>
              </xs:element>
@@ -22,6 +25,25 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
 		<xs:list itemType="xs:date" />
     </xs:simpleType>
 	
+	<xs:simpleType name="tipoNP">
+		<xs:list itemType="xs:nonNegativeInteger" />
+    </xs:simpleType>
+	
+	<xs:simpleType name="tipoDiaSemana">
+		<xs:list itemType="tipoDias" />
+    </xs:simpleType>
+	
+	<xs:simpleType name="tipoDias">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Lunes"/>
+			<xs:enumeration value="Martes"/>
+			<xs:enumeration value="Miercoles"/>
+			<xs:enumeration value="Jueves"/>
+			<xs:enumeration value="Viernes"/>
+			<xs:enumeration value="Sabado"/>
+			<xs:enumeration value="Domingo"/>
+		</xs:restriction>
+    </xs:simpleType>
 	
 </xs:schema>
 
