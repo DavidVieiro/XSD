@@ -30,18 +30,16 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
     </xs:simpleType>
 	
 	<xs:simpleType name="tipoDiaSemana">
-		<xs:list itemType="tipoDias" />
+		<xs:list itemType="diasLaborales" />
     </xs:simpleType>
 	
-	<xs:simpleType name="tipoDias">
+	<xs:simpleType name="diasLaborales">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="Lunes"/>
 			<xs:enumeration value="Martes"/>
 			<xs:enumeration value="Miercoles"/>
 			<xs:enumeration value="Jueves"/>
 			<xs:enumeration value="Viernes"/>
-			<xs:enumeration value="Sabado"/>
-			<xs:enumeration value="Domingo"/>
 		</xs:restriction>
     </xs:simpleType>
 	
