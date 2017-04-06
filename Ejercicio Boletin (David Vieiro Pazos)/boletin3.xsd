@@ -25,7 +25,8 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
 	
 	<xs:simpleType name="tipoNota">
 		<xs:restriction base="xs:positiveInteger">
-			<xs:pattern value="[1-9]|10" />
+			<xs:minInclusive value="1" />
+			<xs:maxInclusive value="10" />
 		</xs:restriction>
 	</xs:simpleType>
 	
