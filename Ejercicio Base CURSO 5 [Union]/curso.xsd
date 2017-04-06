@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
+    <xs:element name="Lista">
+       <xs:complexType> <!-- lista es complejo porque contiene elementos -->
+           <xs:sequence>
+             <xs:element name="Curso" maxOccurs="unbounded">
+               <xs:complexType>  <!-- curso es complejo porque contiene elementos -->
+                 <xs:sequence>
+                       <xs:element name="Titulo" type="xs:string"/>
+                       <xs:element name="Horas" type="xs:nonNegativeInteger" minOccurs="0"/>
+                       <xs:element name="diaComienzo" type="tipoDiaCom"/>
+                       <xs:element name="talla1" type="tipoTalla1"/>
+                       <xs:element name="talla2" type="tipoTalla2"/>
+                       <xs:element name="valoracion" type="tipoValoracion"/>
+                 </xs:sequence>
+              </xs:complexType>
+             </xs:element>
+           </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+	
+	<xs:simpleType name="tipoDiaCom">
+		<xs:union>
+		
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="L" />
+					<xs:enumeration value="MA" />
+					<xs:enumeration value="MI" />
+					<xs:enumeration value="J" />
+					<xs:enumeration value="V" />
+				</xs:restriction>
+			</xs:simpleType>
+			
+			<xs:simpleType>
+				<xs:restriction base="xs:positiveInteger">
+					<xs:minInclusive value="1" />
+					<xs:maxInclusive value="31" />
+				</xs:restriction>
+			</xs:simpleType>
+			
+		</xs:union>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoTalla1">
+		<xs:union>
+		
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="S" />
+					<xs:enumeration value="M" />
+					<xs:enumeration value="L" />
+					<xs:enumeration value="XL" />
+				</xs:restriction>
+			</xs:simpleType>
+			
+			<xs:simpleType>
+				<xs:restriction base="xs:positiveInteger">
+					<xs:minInclusive value="36" />
+					<xs:maxInclusive value="44" />
+				</xs:restriction>
+			</xs:simpleType>
+			
+		</xs:union>
+	</xs:simpleType>
+	
+	
+	<xs:simpleType name="tipoTalla2">
+		<xs:union memberTypes="tipoTallas xs:positiveInteger" />
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoTallas">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="S" />
+			<xs:enumeration value="M" />
+			<xs:enumeration value="L" />
+			<xs:enumeration value="XL" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoValoracion">
+		<xs:union memberTypes="xs:boolean xs:positiveInteger" />
+	</xs:simpleType>
+	
+</xs:schema>
