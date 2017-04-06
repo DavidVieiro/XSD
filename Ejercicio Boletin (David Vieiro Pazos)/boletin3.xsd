@@ -19,8 +19,14 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
 		<xs:sequence>
 			<xs:element name="modulo" type="xs:string" />
 			<xs:element name="curso" type="xs:positiveInteger" />
-			<xs:element name="nota" type="xs:positiveInteger" />
+			<xs:element name="nota" type="tipoNota" />
 		</xs:sequence>
 	</xs:complexType>
+	
+	<xs:simpleType name="tipoNota">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[1-9]|10" />
+		</xs:restriction>
+	</xs:simpleType>
 	
 </xs:schema>
