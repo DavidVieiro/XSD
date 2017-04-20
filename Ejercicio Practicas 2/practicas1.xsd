@@ -12,6 +12,10 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
 							<xs:element name="nif" type="tipoNIF" />
 							<xs:element name="resultado" type="tipoResultado" />
 							<xs:element name="observaciones" type="tipoObserv" minOccurs="0" />
+							<xs:choice>
+								<xs:element name="ip" type="xs:string" />
+								<xs:element name="mac" type="xs:string" />
+							</xs:choice>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -38,5 +42,7 @@ xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
 			<xs:enumeration value="No Apto" />
 		</xs:restriction>
     </xs:simpleType>
+	
+	
 	
 </xs:schema>
