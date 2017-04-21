@@ -22,6 +22,9 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 			<nombre>Jose</nombre>
 			<apellidos>Gomez</apellidos>
 		</director>
+		<subDirector antiguedad="4" />
+		<jefeEstudios antiguedad="4">Isabel</jefeEstudios>
+		<nocturno horas="4">true</nocturno>
 	</Curso>
 	<Curso>
 		<Titulo>BBDD</Titulo>
@@ -37,4 +40,3 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 		</profesor>
 	</Curso>
  </Lista>
-

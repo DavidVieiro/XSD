@@ -16,6 +16,9 @@
 							<xs:element name="profesor" type="tipoProfesor" minOccurs="0" />
 							<xs:element name="bedel" type="tipoBedel" minOccurs="0" />
 							<xs:element name="director" type="tipoDirector" minOccurs="0" />
+							<xs:element name="subDirector" type="tipoSubDirector" minOccurs="0" />
+							<xs:element name="jefeEstudios" type="tipoJefeEstudios" minOccurs="0" />
+							<xs:element name="nocturno" type="tipoNocturno" minOccurs="0" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -57,6 +60,26 @@
 				<xs:attribute name="antiguedad" type="xs:positiveInteger" use="required" />
 			</xs:extension>
 		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoSubDirector">
+		<xs:attribute name="antiguedad" type="xs:positiveInteger" use="required" />
+	</xs:complexType>
+	
+	<xs:complexType name="tipoJefeEstudios">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="antiguedad" type="xs:positiveInteger" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoNocturno">
+		<xs:simpleContent>
+			<xs:extension base="xs:boolean">
+				<xs:attribute name="horas" type="xs:positiveInteger" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
 	</xs:complexType>
 	
 </xs:schema>
