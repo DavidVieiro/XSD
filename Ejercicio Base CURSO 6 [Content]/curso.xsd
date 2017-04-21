@@ -19,6 +19,7 @@
 							<xs:element name="subDirector" type="tipoSubDirector" minOccurs="0" />
 							<xs:element name="jefeEstudios" type="tipoJefeEstudios" minOccurs="0" />
 							<xs:element name="nocturno" type="tipoNocturno" minOccurs="0" />
+							<xs:element name="secretario" type="tipoSecretario" minOccurs="0" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -81,5 +82,20 @@
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
+	
+	<xs:complexType name="tipoSecretario">
+		<xs:simpleContent>
+			<xs:extension base="tipoSec">
+				<xs:attribute name="fechaNacimiento" type="xs:date" use="required" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoSec">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Jose" />
+			<xs:enumeration value="Ana" />
+		</xs:restriction>
+	</xs:simpleType>
 	
 </xs:schema>
