@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
-		>
+		xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
 	<xs:element name="Lista">
-		<xs:complexType> <!-- lista es complejo porque contiene elementos -->
+		<xs:complexType>
+			<!-- lista es complejo porque contiene elementos -->
 			<xs:sequence>
 				<xs:element name="Curso" maxOccurs="unbounded">
-					<xs:complexType>  <!-- curso es complejo porque contiene elementos -->
+					<xs:complexType>
+						<!-- curso es complejo porque contiene elementos -->
 						<xs:sequence>
-							<xs:element name="Titulo" type="xs:string"/>
-							<xs:element name="Horas" type="xs:nonNegativeInteger"/>
-							<xs:element name="alumno" type="tipoAlumno"/>
-							<xs:element name="profesor" type="tipoProfesor"/>
+							<xs:element name="Titulo" type="xs:string" />
+							<xs:element name="Horas" type="xs:nonNegativeInteger" />
+							<xs:element name="alumno" type="tipoAlumno" minOccurs="0" />
+							<xs:element name="profesor" type="tipoProfesor" minOccurs="0" />
+							<xs:element name="bedel" type="tipoBedel" minOccurs="0" />
+							<xs:element name="director" type="tipoDirector" minOccurs="0" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -26,7 +29,7 @@
 			<xs:element name="apellidos" type="xs:string" />
 		</xs:sequence>
 	</xs:complexType>
-	
+
 	<xs:complexType name="tipoProfesor">
 		<xs:complexContent>
 			<xs:extension base="tipoAlumno">
@@ -37,5 +40,23 @@
 		</xs:complexContent>
 	</xs:complexType>
 	
-
+	<xs:complexType name="tipoBedel">
+		<xs:complexContent>
+			<xs:extension base="tipoAlumno">
+				<xs:sequence>
+					<xs:element name="turno" type="xs:string" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoDirector">
+		<!-- Como partimos de cun complexContent este es complexContent tambien en vez de simpleContent -->
+		<xs:complexContent>
+			<xs:extension base="tipoAlumno">
+				<xs:attribute name="antiguedad" type="xs:positiveInteger" use="required" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
 </xs:schema>

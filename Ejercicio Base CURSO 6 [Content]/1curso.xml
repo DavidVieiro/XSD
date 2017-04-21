@@ -13,6 +13,15 @@ xsi:noNamespaceSchemaLocation="curso.xsd">
 			<apellidos>Lopez</apellidos>
 			<modulo>LM</modulo>
 		</profesor>
+		<bedel>
+			<nombre>Jose</nombre>
+			<apellidos>Gomez</apellidos>
+			<turno>Mañanas</turno>
+		</bedel>
+		<director antiguedad="4">
+			<nombre>Jose</nombre>
+			<apellidos>Gomez</apellidos>
+		</director>
 	</Curso>
 	<Curso>
 		<Titulo>BBDD</Titulo>
