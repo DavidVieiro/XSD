@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="ordenadores.xsd">
+	<ordenadorProfesor>
+		<IP>172.16.5.50</IP>
+		<nombre>PC0500</nombre>
+	</ordenadorProfesor>
+	<ordenadorAlumno>
+		<IP>172.16.5.50</IP>
+		<nombre>PC0500</nombre>
+		<alumno></alumno>
+	</ordenadorAlumno>
+	<ordenadorAlumno>
+		<IP>172.16.5.50</IP>
+		<nombre>PC0500</nombre>
+		<alumno></alumno>
+	</ordenadorAlumno>
+	<ordenadorAlumno>
+		<IP>172.16.5.50</IP>
+		<nombre>PC0500</nombre>
+		<alumno></alumno>
+	</ordenadorAlumno>
+	<ordenadorJefatura>
+		<IP>172.16.5.50</IP>
+		<nombre>PC0500</nombre>
+		<sala></sala>
+	</ordenadorJefatura>
+	<ordenadorJefatura>
+		<IP>172.16.5.50</IP>
+		<nombre>PC0500</nombre>
+		<sala></sala>
+	</ordenadorJefatura>
+</Lista>
+
+<!-- Para explicar grupos de atributos añadimos mac, sistema operativo y ram como atributos a ordenadorJefatura
+ mac y sistema operativo a ordenadorAlumno -->
+

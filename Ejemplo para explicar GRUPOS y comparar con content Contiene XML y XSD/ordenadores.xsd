@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd"
+		>
+	<xs:element name="Lista">
+		<xs:complexType> 
+			<xs:sequence>
+				<xs:element name="ordenadorProfesor" type="tipoOrdenadorP"/>
+				<xs:element name="ordenadorAlumno" type="tipoOrdenadorA"  maxOccurs="unbounded"/>
+				<xs:element name="ordenadorJefatura" type="tipoOrdenadorJ" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="tipoOrdenadorP"> 
+		<xs:sequence>
+			<xs:element name="IP" type="xs:string"/>
+			<xs:element name="nombre" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipoOrdenadorA"> 
+		<xs:complexContent>
+			<xs:extension base="tipoOrdenadorP">
+				<xs:sequence>
+					<xs:element name="alumno" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="tipoOrdenadorJ"> 
+		<xs:complexContent>
+			<xs:extension base="tipoOrdenadorP">
+				<xs:sequence>
+					<xs:element name="sala" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!--
+	<xs:complexType name="tipoOrdenadorA"> 
+		<xs:sequence>
+			<xs:element name="IP" type="xs:string"/>
+			<xs:element name="nombre" type="xs:string"/>
+			<xs:element name="alumno" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tipoOrdenadorJ"> 
+		<xs:sequence>
+			<xs:element name="IP" type="xs:string"/>
+			<xs:element name="nombre" type="xs:string"/>
+			<xs:element name="sala" type="xs:string"/>
+
+		</xs:sequence>
+	</xs:complexType>
+	-->
+</xs:schema>
+
+
