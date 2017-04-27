@@ -12,13 +12,42 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+	
+	<xs:group name="tipoIPnombre">
+		<xs:sequence>
+			<xs:element name="IP" type="xs:string"/>
+			<xs:element name="nombre" type="xs:string"/>
+		</xs:sequence>
+	</xs:group>
+	
+	<xs:complexType name="tipoOrdenadorP"> 
+		<xs:sequence>
+			<xs:group ref="tipoIPnombre" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoOrdenadorA"> 
+		<xs:sequence>
+			<xs:group ref="tipoIPnombre" />
+			<xs:element name="alumno" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoOrdenadorJ"> 
+		<xs:sequence>
+			<xs:group ref="tipoIPnombre" />
+			<xs:element name="sala" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--
 	<xs:complexType name="tipoOrdenadorP"> 
 		<xs:sequence>
 			<xs:element name="IP" type="xs:string"/>
 			<xs:element name="nombre" type="xs:string"/>
 		</xs:sequence>
 	</xs:complexType>
-
+	
 	<xs:complexType name="tipoOrdenadorA"> 
 		<xs:complexContent>
 			<xs:extension base="tipoOrdenadorP">
@@ -38,7 +67,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<!--
+	
 	<xs:complexType name="tipoOrdenadorA"> 
 		<xs:sequence>
 			<xs:element name="IP" type="xs:string"/>
