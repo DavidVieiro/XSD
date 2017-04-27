@@ -5,27 +5,27 @@ xsi:noNamespaceSchemaLocation="ordenadores.xsd">
 		<IP>172.16.5.50</IP>
 		<nombre>PC0500</nombre>
 	</ordenadorProfesor>
-	<ordenadorAlumno>
+	<ordenadorAlumno mac="AA" so="W7">
 		<IP>172.16.5.50</IP>
 		<nombre>PC0500</nombre>
 		<alumno></alumno>
 	</ordenadorAlumno>
-	<ordenadorAlumno>
+	<ordenadorAlumno mac="AA" so="W7">
 		<IP>172.16.5.50</IP>
 		<nombre>PC0500</nombre>
 		<alumno></alumno>
 	</ordenadorAlumno>
-	<ordenadorAlumno>
+	<ordenadorAlumno mac="AA" so="W7">
 		<IP>172.16.5.50</IP>
 		<nombre>PC0500</nombre>
 		<alumno></alumno>
 	</ordenadorAlumno>
-	<ordenadorJefatura>
+	<ordenadorJefatura mac="AA" so="W7" ram="1">
 		<IP>172.16.5.50</IP>
 		<nombre>PC0500</nombre>
 		<sala></sala>
 	</ordenadorJefatura>
-	<ordenadorJefatura>
+	<ordenadorJefatura mac="AA" so="W7" ram="1">
 		<IP>172.16.5.50</IP>
 		<nombre>PC0500</nombre>
 		<sala></sala>

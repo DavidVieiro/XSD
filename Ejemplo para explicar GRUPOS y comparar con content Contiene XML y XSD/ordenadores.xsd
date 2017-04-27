@@ -20,6 +20,11 @@
 		</xs:sequence>
 	</xs:group>
 	
+	<xs:attributeGroup name="tipoMACso">
+		<xs:attribute name="mac" type="xs:string" />
+		<xs:attribute name="so" type="xs:string" />
+	</xs:attributeGroup>
+	
 	<xs:complexType name="tipoOrdenadorP"> 
 		<xs:sequence>
 			<xs:group ref="tipoIPnombre" />
@@ -28,9 +33,11 @@
 	
 	<xs:complexType name="tipoOrdenadorA"> 
 		<xs:sequence>
+			
 			<xs:group ref="tipoIPnombre" />
 			<xs:element name="alumno" type="xs:string"/>
 		</xs:sequence>
+		<xs:attributeGroup ref="tipoMACso" />
 	</xs:complexType>
 	
 	<xs:complexType name="tipoOrdenadorJ"> 
@@ -38,6 +45,8 @@
 			<xs:group ref="tipoIPnombre" />
 			<xs:element name="sala" type="xs:string"/>
 		</xs:sequence>
+		<xs:attributeGroup ref="tipoMACso" />
+		<xs:attribute name="ram" type="xs:string" />
 	</xs:complexType>
 	
 	<!--
