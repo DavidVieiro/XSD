@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="personas.xsd">   
+      <persona1>
+        <nombre>pepe</nombre>
+        <apellido>Lopez</apellido>        
+      </persona1> 
+           
+      <persona2 edad="20">
+        <nombre>pepe</nombre>
+        <apellido>Lopez</apellido>
+        <direccion>C/Mayor</direccion>
+      </persona2> 
+</agenda>
+
+<!--
+Tenemos un tipo de datos: datospersonales1 que contiene los elementos: nombre y apellido. Creamos datospersonales2 a partir del anterior añadinedole el elemento direccion y el atributo edad.
+-->

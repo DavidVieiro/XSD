@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
+	
+	<xs:element name="agenda">
+		<xs:complexType> 
+			<xs:sequence>
+				<xs:element name="persona1" type="tipoPersona1" />
+				<xs:element name="persona2" type="tipoPersona2" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="tipoPersona1"> 
+		<xs:sequence>
+			<xs:group ref="tipoNombreApellidos" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoPersona2"> 
+		<xs:sequence>
+			<xs:group ref="tipoNombreApellidos" />
+			<xs:element name="direccion" type="xs:string" />
+		</xs:sequence>
+		<xs:attribute name="edad" type="xs:positiveInteger" />
+	</xs:complexType>
+	
+	<xs:group name="tipoNombreApellidos">
+		<xs:sequence>
+			<xs:element name="nombre" type="xs:string" />
+			<xs:element name="apellido" type="xs:string" />
+		</xs:sequence>
+	</xs:group>
+	
+</xs:schema>
