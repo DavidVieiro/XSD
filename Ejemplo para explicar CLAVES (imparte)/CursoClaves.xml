@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="cursoClaves.xsd">
+	<Curso>
+		<codigoC>C1</codigoC>
+		<Titulo>Lenguaje de Marcas</Titulo>
+		<Horas>200</Horas>
+	</Curso>
+	<Curso>
+		<codigoC>C2</codigoC>
+		<Titulo>Redes</Titulo>
+		<Horas>210</Horas>
+	</Curso>
+	<profesor>
+		<codigoP>P1</codigoP>
+		<nombre>Celia</nombre>
+	</profesor>
+	<profesor>
+		<codigoP>P2</codigoP>
+		<nombre>clementina</nombre>
+	</profesor>
+	<imparte>
+		<codigoC>C1</codigoC>
+		<codigoP>P1</codigoP>
+	</imparte>
+	<imparte>
+		<codigoC>C1</codigoC>
+		<codigoP>P2</codigoP>
+	</imparte>
+
+</Lista>
+

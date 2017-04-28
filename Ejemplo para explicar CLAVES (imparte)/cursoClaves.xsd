@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
+	<xs:element name="Lista">
+		<xs:complexType>
+			<!-- lista es complejo porque contiene elementos -->
+			<xs:sequence>
+				<xs:element name="Curso" maxOccurs="unbounded">
+					<xs:complexType>
+						<!-- curso es complejo porque contiene elementos -->
+						<xs:sequence>
+							<xs:element name="codigoC" type="xs:string"/>
+							<xs:element name="Titulo" type="xs:string"/>
+							<xs:element name="Horas" type="xs:nonNegativeInteger"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="profesor" maxOccurs="unbounded">
+					<xs:complexType>
+						<!-- curso es complejo porque contiene elementos -->
+						<xs:sequence>
+							<xs:element name="codigoP" type="xs:string"/>
+							<xs:element name="nombre" type="xs:string"/>
+
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="imparte" maxOccurs="unbounded">
+					<xs:complexType>
+						<!-- curso es complejo porque contiene elementos -->
+						<xs:sequence>
+							<xs:element name="codigoC" type="xs:string"/>
+							<xs:element name="codigoP" type="xs:string"/>
+
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<!-- Clave de curso -->
+
+		<!-- todos los cursos tienen horas diferentes -->
+
+		<!-- todos los cursos tienen titulos diferentes -->
+
+		<!-- Clave de profesor -->
+
+		<!-- Clave de imparte -->
+
+		<!-- claves ajenas de imparte -->
+
+	</xs:element>
+
+
+</xs:schema>
+
+
