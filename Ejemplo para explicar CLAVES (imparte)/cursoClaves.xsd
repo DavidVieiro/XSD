@@ -2,11 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 		xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
-	<xs:element name="Lista">
+	<xs:element name="lista">
 		<xs:complexType>
 			<!-- lista es complejo porque contiene elementos -->
 			<xs:sequence>
-				<xs:element name="Curso" maxOccurs="unbounded">
+				<xs:element name="curso" maxOccurs="unbounded">
 					<xs:complexType>
 						<!-- curso es complejo porque contiene elementos -->
 						<xs:sequence>
@@ -22,7 +22,6 @@
 						<xs:sequence>
 							<xs:element name="codigoP" type="xs:string"/>
 							<xs:element name="nombre" type="xs:string"/>
-
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -32,27 +31,45 @@
 						<xs:sequence>
 							<xs:element name="codigoC" type="xs:string"/>
 							<xs:element name="codigoP" type="xs:string"/>
-
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
 		</xs:complexType>
 		<!-- Clave de curso -->
-
+		<xs:key name="PK_curso">
+			<xs:selector xpath="curso"/>
+			<xs:field xpath="codigoC"/>
+		</xs:key>
 		<!-- todos los cursos tienen horas diferentes -->
-
+		<xs:unique name="UnicoHorasCurso">
+			<xs:selector xpath="curso"/>
+			<xs:field xpath="Horas"/>
+		</xs:unique>
 		<!-- todos los cursos tienen titulos diferentes -->
-
+		<xs:unique name="UnicoTituloCurso">
+			<xs:selector xpath="curso"/>
+			<xs:field xpath="Titulo"/>
+		</xs:unique>
 		<!-- Clave de profesor -->
-
+		<xs:key name="PK_profesor">
+			<xs:selector xpath="profesor"/>
+			<xs:field xpath="codigoP"/>
+		</xs:key>
 		<!-- Clave de imparte -->
-
+		<xs:key name="PK_imparte">
+			<xs:selector xpath="imparte"/>
+			<xs:field xpath="codigoC"/>
+			<xs:field xpath="codigoP"/>
+		</xs:key>
 		<!-- claves ajenas de imparte -->
-
+		<xs:keyref name="FK_imparte1" refer="PK_curso">
+			<xs:selector xpath="curso"/>
+			<xs:field xpath="codigoC"/>
+		</xs:keyref>
+		<xs:keyref name="FK_imparte2" refer="PK_profesor">
+			<xs:selector xpath="profesor"/>
+			<xs:field xpath="codigoP"/>
+		</xs:keyref>
 	</xs:element>
-
-
 </xs:schema>
-
-
