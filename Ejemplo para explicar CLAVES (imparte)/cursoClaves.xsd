@@ -6,6 +6,7 @@
 		<xs:complexType>
 			<!-- lista es complejo porque contiene elementos -->
 			<xs:sequence>
+			
 				<xs:element name="curso" maxOccurs="unbounded">
 					<xs:complexType>
 						<!-- curso es complejo porque contiene elementos -->
@@ -16,24 +17,38 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				
+				<xs:element name="aula" maxOccurs="unbounded">
+					<xs:complexType>
+						<!-- aula es complejo porque contiene elementos -->
+						<xs:sequence>
+							<xs:element name="piso" type="xs:string"/>
+							<xs:element name="grupo" type="xs:string"/>
+						</xs:sequence>
+						<xs:attribute name="numero" type="xs:positiveInteger" />
+					</xs:complexType>
+				</xs:element>
+				
 				<xs:element name="profesor" maxOccurs="unbounded">
 					<xs:complexType>
-						<!-- curso es complejo porque contiene elementos -->
+						<!-- profesor es complejo porque contiene elementos -->
 						<xs:sequence>
 							<xs:element name="codigoP" type="xs:string"/>
 							<xs:element name="nombre" type="xs:string"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				
 				<xs:element name="imparte" maxOccurs="unbounded">
 					<xs:complexType>
-						<!-- curso es complejo porque contiene elementos -->
+						<!-- imparte es complejo porque contiene elementos -->
 						<xs:sequence>
 							<xs:element name="codigoC" type="xs:string"/>
 							<xs:element name="codigoP" type="xs:string"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				
 			</xs:sequence>
 		</xs:complexType>
 		<!-- Clave de curso -->
@@ -71,5 +86,10 @@
 			<xs:selector xpath="profesor"/>
 			<xs:field xpath="codigoP"/>
 		</xs:keyref>
+		<!-- Clave de aula -->
+		<xs:key name="PK_aula">
+			<xs:selector xpath="aula"/>
+			<xs:field xpath="@numero"/>
+		</xs:key>
 	</xs:element>
 </xs:schema>

@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xsi:noNamespaceSchemaLocation="cursoClaves.xsd">
-	<Curso>
+	<curso>
 		<codigoC>C1</codigoC>
 		<Titulo>Lenguaje de Marcas</Titulo>
 		<Horas>200</Horas>
-	</Curso>
-	<Curso>
+	</curso>
+	<curso>
 		<codigoC>C2</codigoC>
 		<Titulo>Redes</Titulo>
 		<Horas>210</Horas>
-	</Curso>
+	</curso>
+	<aula numero="1"> <!-- clave principal numero -->
+		<piso></piso>
+		<grupo></grupo>
+	</aula>
+	<aula numero="2">
+		<piso></piso>
+		<grupo></grupo>
+	</aula>
 	<profesor>
 		<codigoP>P1</codigoP>
 		<nombre>Celia</nombre>
