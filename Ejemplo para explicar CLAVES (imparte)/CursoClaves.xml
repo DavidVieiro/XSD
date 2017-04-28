@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xsi:noNamespaceSchemaLocation="cursoClaves.xsd">
 	<Curso>
 		<codigoC>C1</codigoC>
@@ -27,5 +27,5 @@ xsi:noNamespaceSchemaLocation="cursoClaves.xsd">
 		<codigoC>C1</codigoC>
 		<codigoP>P2</codigoP>
 	</imparte>
-</Lista>
+</lista>
 
