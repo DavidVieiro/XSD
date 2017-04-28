@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="ordenadores.xsd">
+	<ordenadorProfesor mac="11:11:22:88:AA:11" aula="B05" so="Windows7">
+		<IP>172172.16.5.60</IP>
+		<nombre>PC0500</nombre>
+	</ordenadorProfesor>
+	<ordenadorProfesor mac="12:11:22:88:AA:11" aula="B05" so="Windows7">
+		<IP>172172.16.5.60</IP>
+		<nombre>PC0500</nombre>
+	</ordenadorProfesor>
+	<ordenadorAlumno mac="11:11:22:88:AA:11" aula="B05">
+		<IP>172.16.5.50</IP>
+		<nombre>PC0500</nombre>		
+		<alumno>Pepe</alumno>		
+	</ordenadorAlumno>
+	<ordenadorAlumno mac="11:11:22:88:AA:11" aula="B05">
+		<IP>172.16.5.51</IP>
+		<nombre>PC0500</nombre>		
+		<alumno>Pepe</alumno>		
+	</ordenadorAlumno>
+	<ordenadorAlumno mac="11:11:22:88:AA:11" aula="B05">
+		<IP>172.16.5.52</IP>
+		<nombre>PC0500</nombre>		
+		<alumno>Pepe</alumno>		
+	</ordenadorAlumno>	
+	<ordenadorJefatura>
+		<IP>172.16.5.70</IP>
+		<nombre>PC0500</nombre>
+		<sala>11</sala>
+	</ordenadorJefatura>
+	<ordenadorJefatura>
+		<IP>172.16.5.80</IP>
+		<nombre>PC0500</nombre>
+		<sala>12</sala>
+	</ordenadorJefatura>
+	<sala>
+		<numero>11</numero>
+		<ubicacion>Planta 1</ubicacion>
+	</sala>
+	<sala>
+		<numero>12</numero>
+		<ubicacion>Planta 1</ubicacion>
+	</sala>
+ </Lista>
+ <!-- -->
+ <!--Clave principal: IP de ordenador de alumno-->
+ <!--Clave principal: mac del ordenador de profesor-->
+ <!--sala clave ajena -->

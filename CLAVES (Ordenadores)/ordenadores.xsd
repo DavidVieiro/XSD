@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
+	<xs:element name="Lista">
+		<xs:complexType>
+			<xs:sequence>
+				<!--Ordenador Profesor-->
+				<xs:element name="ordenadorProfesor" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>							
+							<xs:element name="IP" type="xs:string"/>
+							<xs:element name="nombre" type="xs:string"/>							
+						</xs:sequence>
+						<!--Los atributos siempre entre secuence y complexType-->
+						<xs:attribute name="mac" type="xs:string"/>
+						<xs:attribute name="aula" type="xs:string"/>
+						<xs:attribute name="so" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ordenadorAlumno" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IP" type="xs:string"/>							
+							<xs:element name="nombre" type="xs:string"/>								
+							<xs:element name="alumno" type="xs:string"/>
+						</xs:sequence>						
+						<xs:attribute name="mac" type="xs:string"/>
+						<xs:attribute name="aula" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ordenadorJefatura" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IP" type="xs:string"/>								
+							<xs:element name="nombre" type="xs:string"/>								
+							<xs:element name="sala" type="xs:integer"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="sala" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="numero" type="xs:integer"/>								
+							<xs:element name="ubicacion" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<!--clave-->
+
+	</xs:element>
+</xs:schema>
