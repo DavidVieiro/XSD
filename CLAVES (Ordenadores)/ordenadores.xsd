@@ -5,6 +5,7 @@
 	<xs:element name="Lista">
 		<xs:complexType>
 			<xs:sequence>
+			
 				<!--Ordenador Profesor-->
 				<xs:element name="ordenadorProfesor" maxOccurs="unbounded">
 					<xs:complexType>
@@ -18,6 +19,7 @@
 						<xs:attribute name="so" type="xs:string"/>
 					</xs:complexType>
 				</xs:element>
+				
 				<xs:element name="ordenadorAlumno" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
@@ -29,6 +31,7 @@
 						<xs:attribute name="aula" type="xs:string"/>
 					</xs:complexType>
 				</xs:element>
+				
 				<xs:element name="ordenadorJefatura" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
@@ -38,6 +41,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				
 				<xs:element name="sala" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
@@ -46,9 +50,30 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				
 			</xs:sequence>
 		</xs:complexType>
+		
 		<!--clave-->
-
+		<xs:key name="PK_ordenadorAlumno">
+			<xs:selector xpath="ordenadorAlumno"/>
+			<xs:field xpath="IP"/>
+		</xs:key>
+		
+		<xs:key name="PK_ordenadorProfesor">
+			<xs:selector xpath="ordenadorProfesor"/>
+			<xs:field xpath="@mac"/>
+		</xs:key>
+		
+		<xs:key name="PK_sala">
+			<xs:selector xpath="sala"/>
+			<xs:field xpath="numero"/>
+		</xs:key>
+		
+		<xs:keyref name="FK_sala" refer="PK_sala">
+			<xs:selector xpath="ordenadorJefatura"/>
+			<xs:field xpath="sala"/>
+		</xs:keyref>
+		
 	</xs:element>
 </xs:schema>
