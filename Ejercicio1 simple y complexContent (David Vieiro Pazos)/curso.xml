@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Lista xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="curso.xsd">
+	<Curso>
+		<Titulo>Lenguaje de Marcas</Titulo>
+		<Horas>200</Horas>
+		<profesor nombre="Ana"/>
+		<trimestral fechaComienzo="2016-01-02">true</trimestral>
+		<profesor2 nombre="Ana"/><!--Ana o Ines-->
+		<profesor3 edad="35">Ana</profesor3>
+		<!--Ana o Ines y edad menor de 65-->
+	</Curso>
+	<Curso>
+		<Titulo>BBDD</Titulo>
+		<Horas>210</Horas>
+	</Curso>
+ </Lista>

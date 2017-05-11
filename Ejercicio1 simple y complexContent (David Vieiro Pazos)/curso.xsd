@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:noNamespaceSchemaLocation="http://www.w3.org/2001/XMLSchema.xsd">
+	<xs:element name="Lista">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Curso" type="tipoCurso" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="tipoCurso">
+		<xs:sequence>
+			<xs:element name="Titulo" type="xs:string"/>
+			<xs:element name="Horas" type="xs:positiveInteger" />
+			<xs:element name="profesor" type="tipoProf" minOccurs="0" />
+			<xs:element name="trimestral" type="tipoTrimestral" minOccurs="0" />
+			<xs:element name="profesor2" type="tipoProf2" minOccurs="0" />
+			<xs:element name="profesor3" type="tipoProf3" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoProf">
+		<xs:attribute name="nombre" type="xs:string" />
+	</xs:complexType>
+	
+	<xs:complexType name="tipoTrimestral" >
+		<xs:simpleContent>
+			<xs:extension base="xs:boolean">
+				<xs:attribute name="fechaComienzo" type="xs:date" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoProf2">
+		<xs:attribute name="nombre" type="tipoNombre" />
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoNombre">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ana" />
+			<xs:enumeration value="Ines" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipoProf3">
+		<xs:simpleContent>
+			<xs:extension base="tipoNombre">
+				<xs:attribute name="edad" type="tipoEdad" />
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoEdad">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:maxExclusive value="65" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+</xs:schema>
